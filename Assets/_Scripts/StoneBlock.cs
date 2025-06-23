@@ -13,4 +13,9 @@ public class StoneBlock : Block
     {
 
     }
+
+    protected override void BounceBall()
+    {
+        base.BounceBall();
+    }
 }
