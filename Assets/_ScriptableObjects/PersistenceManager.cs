@@ -4,10 +4,10 @@ using UnityEngine;
 public class PersistenceManager : MonoBehaviour
 {
 
-    public List<PersistentScore> objectsToSave;
+    public List<PersistentObject> objectsToSave;
     void OnEnable()
     {
-        foreach (PersistentScore item in objectsToSave)
+        foreach (PersistentObject item in objectsToSave)
         {
             item.Load();
         }
@@ -15,7 +15,7 @@ public class PersistenceManager : MonoBehaviour
 
     void OnDisable()
     {
-        foreach (PersistentScore item in objectsToSave)
+        foreach (PersistentObject item in objectsToSave)
         {
             item.Save();
         }

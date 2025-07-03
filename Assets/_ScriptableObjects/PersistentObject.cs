@@ -2,7 +2,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
-public abstract class PersistentScore : ScriptableObject
+public abstract class PersistentObject : ScriptableObject
 {
     public void Save(string fileName = null)
     {

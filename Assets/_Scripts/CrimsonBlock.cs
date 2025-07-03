@@ -16,9 +16,9 @@ public class CrimsonBlock : Block
 
     }
 
-    protected override void BounceBall()
+    protected override void BounceBall(Collision collision)
     {
-        base.BounceBall();
+        base.BounceBall(collision);
         // Reduce points by percentageToReduce
     }
 }

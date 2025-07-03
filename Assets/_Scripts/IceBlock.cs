@@ -16,9 +16,9 @@ public class IceBlock : Block
 
     }
 
-    protected override void BounceBall()
+    protected override void BounceBall(Collision collision)
     {
-        base.BounceBall();
+        base.BounceBall(collision);
         // Bounce on an random angle; calculated bounce +/- randomRange
     }
 }

@@ -46,4 +46,9 @@ public class Score : MonoBehaviour
             // PlayerPrefs.SetInt(HIGH_SCORE_KEY, highScore);
         }
     }
+
+    public void IncreaseScore(int score)
+    {
+        highScoreSO.score += score;
+    }
 }

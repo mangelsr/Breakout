@@ -148,6 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb70de2ec8640b4e9bf51cc36843f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenLimitX: 23
+  screenLimitX: 25
   paddleSpeed: 35
-  controlType: 1
+  controlType: 0
