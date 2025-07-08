@@ -28,7 +28,7 @@ public class Block : MonoBehaviour
     {
         Vector3 direction = collision.contacts[0].point - transform.position;
         direction = direction.normalized;
-        collision.rigidbody.velocity = collision.gameObject.GetComponent<Ball>().speed * direction;
+        collision.rigidbody.velocity = collision.gameObject.GetComponent<Ball>().settings.ballSpeed * direction;
         resistance--;
     }
 }

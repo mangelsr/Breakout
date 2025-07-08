@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2717646124631578112}
   - component: {fileID: 1720844469637032586}
   - component: {fileID: 7725353930172130583}
+  - component: {fileID: 1362509265004350185}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -148,6 +149,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb70de2ec8640b4e9bf51cc36843f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  screenLimitX: 25
+  settings: {fileID: 11400000, guid: 0cfa6b81492c384d48d64ad113e9986e, type: 2}
   paddleSpeed: 35
-  controlType: 0
+--- !u!114 &1362509265004350185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8006110265289636013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3994ac678bbb8fd55b23efaaea77ba94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 1
+  keepOnScreen: 1
+  isOnScreen: 1
+  cameraWidth: 0
+  cameraHeight: 0
+  exitRight: 0
+  exitLeft: 0
+  exitUp: 0
+  exitDown: 0

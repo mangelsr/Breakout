@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1866efb5984b2c2f59dd0b8d5d057c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  settings: {fileID: 11400000, guid: 0cfa6b81492c384d48d64ad113e9986e, type: 2}
   ballDestroyed:
     m_PersistentCalls:
       m_Calls:

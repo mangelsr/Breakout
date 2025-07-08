@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b58d90c9aa4e4be9a3c54e8d1831c0, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
-  ballSpeed: 30
-  levelDifficulty: 0
+  ballSpeed: 15
+  levelDifficulty: 1
+  controlType: 0
