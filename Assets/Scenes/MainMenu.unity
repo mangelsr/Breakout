@@ -259,7 +259,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToSave:
-  - {fileID: 11400000, guid: 03f99cf61f423f7838566dcf0ba74505, type: 2}
   - {fileID: 11400000, guid: 0cfa6b81492c384d48d64ad113e9986e, type: 2}
 --- !u!4 &44650861
 Transform:
