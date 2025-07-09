@@ -9,7 +9,7 @@ public class Ball : MonoBehaviour
 
     Vector3 lastPosition = Vector3.zero;
     Vector3 direction = Vector3.zero;
-    Rigidbody rigidbody;
+    new Rigidbody rigidbody;
     BorderControl control;
     public UnityEvent ballDestroyed;
 
@@ -25,7 +25,7 @@ public class Ball : MonoBehaviour
         initialPosition.y += 2;
         transform.position = initialPosition;
         transform.SetParent(playerTransform);
-        rigidbody = gameObject.GetComponent<Rigidbody>();
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -70,7 +70,7 @@ public class Ball : MonoBehaviour
         {
             isGameStarted = true;
             transform.SetParent(null);
-            GetComponent<Rigidbody>().velocity = settings.ballSpeed * Vector3.up;
+            rigidbody.velocity = settings.ballSpeed * Vector3.up;
         }
     }
 

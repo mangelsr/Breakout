@@ -1,17 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WoodBlock : Block
 {
-    void Start()
+    new void Start()
     {
         resistance = 2;
-    }
-
-    void Update()
-    {
-
+        base.Start();
     }
 
     protected override void BounceBall(Collision collision)
