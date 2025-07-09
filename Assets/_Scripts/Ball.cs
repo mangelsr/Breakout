@@ -4,12 +4,12 @@ using UnityEngine.PlayerLoop;
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField] public float speed = 20f;
+    [SerializeField] public Settings settings;
     bool isGameStarted = false;
 
     Vector3 lastPosition = Vector3.zero;
     Vector3 direction = Vector3.zero;
-    Rigidbody rigidbody;
+    new Rigidbody rigidbody;
     BorderControl control;
     public UnityEvent ballDestroyed;
 
@@ -25,7 +25,7 @@ public class Ball : MonoBehaviour
         initialPosition.y += 2;
         transform.position = initialPosition;
         transform.SetParent(playerTransform);
-        rigidbody = gameObject.GetComponent<Rigidbody>();
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -42,7 +42,7 @@ public class Ball : MonoBehaviour
             Debug.Log("Ball touch the upper border");
             direction.y *= -1;
             direction = direction.normalized;
-            rigidbody.velocity = speed * direction;
+            rigidbody.velocity = settings.ballSpeed * direction;
             control.exitUp = false;
             control.enabled = false;
             Invoke("EnableControl", 0.1f);
@@ -54,7 +54,7 @@ public class Ball : MonoBehaviour
             Debug.Log("Ball touch a lateral border");
             direction.x *= -1;
             direction = direction.normalized;
-            rigidbody.velocity = speed * direction;
+            rigidbody.velocity = settings.ballSpeed * direction;
 
             if (control.exitLeft)
                 control.exitLeft = false;
@@ -70,7 +70,7 @@ public class Ball : MonoBehaviour
         {
             isGameStarted = true;
             transform.SetParent(null);
-            GetComponent<Rigidbody>().velocity = speed * Vector3.up;
+            rigidbody.velocity = settings.ballSpeed * Vector3.up;
         }
     }
 

@@ -1,25 +1,18 @@
 using UnityEngine;
 
-enum ControlType
-{
-    Keyboard,
-    Mouse,
-    Controller,
-}
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] Settings settings;
 
-    [SerializeField] int screenLimitX = 23;
     [SerializeField] int paddleSpeed = 35;
-    [SerializeField] ControlType controlType = ControlType.Mouse;
 
 
     void Update()
     {
         Vector3 pos = transform.position;
 
-        switch (controlType)
+        switch (settings.controlType)
         {
             case ControlType.Controller:
             case ControlType.Keyboard:
@@ -36,12 +29,6 @@ public class Player : MonoBehaviour
                 break;
         }
 
-        if (pos.x < -screenLimitX)
-            pos.x = -screenLimitX;
-
-        else if (pos.x > screenLimitX)
-            pos.x = screenLimitX;
-
         transform.position = pos;
     }
 
@@ -51,7 +38,7 @@ public class Player : MonoBehaviour
         {
             Vector3 direction = collision.contacts[0].point - transform.position;
             direction = direction.normalized;
-            collision.rigidbody.velocity = collision.gameObject.GetComponent<Ball>().speed * direction;
+            collision.rigidbody.velocity = collision.gameObject.GetComponent<Ball>().settings.ballSpeed * direction;
         }
     }
 

@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b5a770ded54e5f6c9880e50889c25d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settings: {fileID: 11400000, guid: 0cfa6b81492c384d48d64ad113e9986e, type: 2}
   resistance: 1
   increaseScore:
     m_PersistentCalls:

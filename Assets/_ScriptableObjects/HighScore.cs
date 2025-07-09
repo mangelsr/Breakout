@@ -4,5 +4,5 @@ using UnityEngine;
 public class HighScore : PersistentObject
 {
     public int score = 0;
-    public int highScore = 10000;
+    public int highScore = 0;
 }

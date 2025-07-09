@@ -1,24 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class IceBlock : Block
 {
-    [SerializeField] int randomRange = 15;
+    [SerializeField] int randomRange = 90;
 
-    void Start()
+    new void Start()
     {
         resistance = 2;
+        base.Start();
     }
 
-    void Update()
-    {
-
-    }
 
     protected override void BounceBall(Collision collision)
     {
         base.BounceBall(collision);
-        // Bounce on an random angle; calculated bounce +/- randomRange
+
+        if (collision.rigidbody != null)
+        {
+            Vector3 currentVelocity = collision.rigidbody.velocity;
+            float randomAngle = Random.Range(-randomRange, randomRange);
+            Quaternion rotation = Quaternion.AngleAxis(randomAngle, Vector3.forward);
+            collision.rigidbody.velocity = rotation * currentVelocity;
+        }
     }
 }
