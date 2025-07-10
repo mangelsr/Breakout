@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec209e52b7742624c8ee63ae6c2760dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScoreSO: {fileID: 11400000, guid: 03f99cf61f423f7838566dcf0ba74505, type: 2}
+  highScoreSO: {fileID: 11400000, guid: cf29b727c4a8d4d2992fd3bc6dc133fa, type: 2}
 --- !u!114 &42545203
 MonoBehaviour:
   m_ObjectHideFlags: 0
